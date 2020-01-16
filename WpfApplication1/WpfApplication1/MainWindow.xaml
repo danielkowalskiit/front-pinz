@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="EJPK Program do wysyłania sprawowzdań finansowych" Height="450" Width="725" Icon="images/ico.png" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid x:Name="BoxStart" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="221" Background="#FFC7C6C6">
+            <Label Margin="10,259,10,129" Content="Aby zacząć kliknij poniższy przycisk:"/>
+            <Button x:Name="btn_start" Content="Start" HorizontalAlignment="Left" Margin="35,306,0,0" VerticalAlignment="Top" Width="150" Click="button_Start_Click" Height="74" RenderTransformOrigin="0.494,-0.729"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="98" Margin="30,60,0,0" VerticalAlignment="Top" Width="161" Source="images/logo.png" RenderTransformOrigin="0.627,0.52"/>
+        </Grid>
+        <Grid x:Name="BoxInfoApp" HorizontalAlignment="Left" Height="420" Margin="221,0,0,0" VerticalAlignment="Top" Width="496" Background="#FFB8B5B5">
+            <Label Margin="10,10,10,372" Foreground="White" FontSize="16">Witaj, w programie do wysłania sprawowzdań finansowych</Label>
+            <TextBlock x:Name="textBlockAppInfo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="AppInfo" VerticalAlignment="Top" Width="476" Height="357" Padding="5,10,10,10" Margin="10,53,0,0" FontSize="14"/>
+        </Grid>
+        <Grid x:Name="BoxAddFile" HorizontalAlignment="Left" Height="353" Margin="221,0,0,0" VerticalAlignment="Top" Width="496" Background="#FFB8B5B5" Visibility="Hidden">
+            <Grid HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="496" Background="#FFCDCDCD">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" Krok 1 | Dodaj sprawowzdanie finansowe w formacie xml" VerticalAlignment="Top" Width="496" Height="38" Padding="5,10,10,10" FontSize="13"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="315" VerticalAlignment="Top" Width="496" Margin="0,38,0,0">
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="BoxEncryptFile" HorizontalAlignment="Left" Height="353" Margin="221,0,0,0" VerticalAlignment="Top" Width="496" Background="#FFB8B5B5" Visibility="Hidden">
+            <Grid HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="496" Background="#FFCDCDCD">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" Krok 2 | Podpisz certyfikatem" VerticalAlignment="Top" Width="496" Height="38" Padding="5,10,10,10" FontSize="13"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="315" VerticalAlignment="Top" Width="496" Margin="0,38,0,0">
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="BoxSendFile" HorizontalAlignment="Left" Height="353" Margin="221,0,0,0" VerticalAlignment="Top" Width="496" Background="#FFB8B5B5" Visibility="Hidden">
+            <Grid HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="496" Background="#FFCDCDCD">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" Krok 3 | Wyślij przygotowane sprawowzdanie finansowe" VerticalAlignment="Top" Width="496" Height="38" Padding="5,10,10,10" FontSize="13"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="315" VerticalAlignment="Top" Width="496" Margin="0,38,0,0">
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="NavigationComponents" HorizontalAlignment="Left" Height="67" Margin="221,353,0,0" VerticalAlignment="Top" Width="496" Background="#FFCDCDCD" Visibility="Hidden">
+            <Button x:Name="btn_prev" Content="wstecz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Click="prev_Click" Height="37" Margin="28,10,0,0"/>
+            <Button x:Name="btn_next" Content="dalej" HorizontalAlignment="Left" Margin="161,10,0,0" VerticalAlignment="Top" Width="128" Click="next_Click" Height="37"/>
+            <Separator Margin="294,-3,160,7" RenderTransformOrigin="0.5,0.5" >
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <Button x:Name="btn_end" Content="zakończ" HorizontalAlignment="Left" Margin="340,10,0,0" VerticalAlignment="Top" Width="128" Click="end_Click" Height="37"/>
+        </Grid>
+    </Grid>
+</Window>
